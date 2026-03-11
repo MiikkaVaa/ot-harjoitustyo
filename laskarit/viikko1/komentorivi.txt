@@ -19,4 +19,4 @@ kurssit
                         ├── maksukortti_test.cpython-312-pytest-7.4.4.pyc
                         └── maksukortti_test.cpython-312-pytest-9.0.2.pyc
 
-8 directories, 11 files
+8 directories, 11 files pieni muutos tänne loppuun 
