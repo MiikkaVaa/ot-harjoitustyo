@@ -1,0 +1,105 @@
+commit 007ffa110b6792007080c28182b85575f0c9d2f7
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:47:50 2026 +0200
+
+    poistettu ja uudelleen nimetty
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 802d6f4a0823c85b983e420dbfe3a272f1c47011
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:44:16 2026 +0200
+
+    tehty uusi hakemisto tiedostoille
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d66f6fb95691a875ac9f8b49b63222c24bab5cdb
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:37:11 2026 +0200
+
+    lisätty muutokset add -p komennolla
+
+ eka.txt    | 19 +++----------------
+ kolmas.txt |  2 +-
+ 2 files changed, 4 insertions(+), 17 deletions(-)
+
+commit 4168fd29502a251603b7df92398c148d20c627c0
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:30:59 2026 +0200
+
+    muutettu tiedosto nimi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8682c57988ce28a1d45ead58d8d811d9870a5ebc
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:28:37 2026 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 06ef1e58d166fa0bdfb25613ff8f4554ba200ffa
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:17:16 2026 +0200
+
+    poistettu ja lisätty lisää
+
+ tiedosto.txt | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+commit 9fb8374daedf982b0091ea4204063fab4055ddad
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:15:29 2026 +0200
+
+    lisätty paljon tekstiä
+
+ tiedosto.txt | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+commit 2e52ea11afd9912ed903661fa9debacd3ca5d835
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:06:24 2026 +0200
+
+    muutokset ja lisäykset
+
+ kolmas.txt     | 1 +
+ stuff/joku.txt | 0
+ toinen.txt     | 1 +
+ 3 files changed, 2 insertions(+)
+
+commit 7424aa0e354dfb0e90df863613665ae5916e5fc8
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 13:03:15 2026 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4ba4b0170c4191bd29d522cb3c1c60e67d8fb055
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 12:58:43 2026 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 450f665b9c559c1522f3977c3343eed2da1f698e
+Author: MiikkaVaa <miikka.vaananen@helsinki.fi>
+Date:   Wed Mar 11 12:53:49 2026 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

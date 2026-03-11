@@ -1,0 +1,22 @@
+vmiikka@melkki:~$ tree kurssit
+kurssit
+└── ot2023
+    └── viikko1
+        └── unicafe
+            ├── poetry.lock
+            ├── pyproject.toml
+            └── src
+                ├── index.py
+                ├── kassapaate.py
+                ├── maksukortti.py
+                ├── __pycache__
+                │   └── maksukortti.cpython-312.pyc
+                └── tests
+                    ├── __init__.py
+                    ├── maksukortti_test.py
+                    └── __pycache__
+                        ├── __init__.cpython-312.pyc
+                        ├── maksukortti_test.cpython-312-pytest-7.4.4.pyc
+                        └── maksukortti_test.cpython-312-pytest-9.0.2.pyc
+
+8 directories, 11 files
