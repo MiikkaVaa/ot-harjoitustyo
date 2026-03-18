@@ -9,3 +9,8 @@
 [gitlog.txt](https://github.com/MiikkaVaa/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 
+### Dokumentaatio
+
+- [Vaatimuusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+- [Työaikakirjanpito](dokumentaatio/tyoaikakirjanpito.md)
+
