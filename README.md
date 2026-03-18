@@ -12,5 +12,5 @@
 ### Dokumentaatio
 
 - [Vaatimuusmäärittely](dokumentaatio/vaatimusmaarittely.md)
-- [Työaikakirjanpito](dokumentaatio/tyoaikakirjanpito.md)
+- [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
 
