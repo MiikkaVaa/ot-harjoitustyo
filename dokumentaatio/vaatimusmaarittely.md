@@ -2,23 +2,23 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus tarjoaa Megazonen harrastajien käyttöön ohjelman, joka auttaa pelien järjestämistä ja luo 
-matchmaking rating järjestelmän. Sovelluksessa on mahdollista ylläpitää pelaajalistaa ja seurata 
-pelaajien tasoja sekä muodostaa jokkueita valituista pelaajista.
+Sovellus tarjoaa Megazone-harrastajien käyttöön ohjelman, joka auttaa pelien järjestämistä ja luo 
+matchmaking rating-järjestelmän. Sovelluksessa on mahdollista ylläpitää pelaajalistaa ja seurata 
+pelaajien tasoja sekä muodostaa joukkueita valituista pelaajista.
 
-Sovellusta on ensiksi tarkoitus käyttää 3 vs 3 pelimuotoon.
+Sovellusta on aluksi tarkoitus käyttää 3 vs 3 -pelimuotoon.
 
 ## Käyttäjät
 
-Alussa ei eri käyttäjärooleja, mutta myöhemmin mahdollista lisätä ylläpitäjä, jolla ainoastaan valtuudet
+Alussa ei ole eri käyttäjärooleja, mutta myöhemmin mahdollista lisätä ylläpitäjä, jolla on ainoastaan valtuudet
 poistaa pelaajia tai lisätä pelejä.
 
 ## Perusversion toiminnallisuus
 
 - Lisätä pelaajia
- - Tallentaa nimi ja alku rating-arvo(vakio)
+ - Tallentaa nimi ja alkurating
 - Listata tiedot kaikista pelaajista ja heidän rating-arvoistaan
-- Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita randomilla
+- Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita satunnaisesti
 - Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
 
 ## Jatkokehitysideat
