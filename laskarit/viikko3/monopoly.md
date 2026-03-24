@@ -19,7 +19,16 @@
     Pelinappula "1" -- "1" Pelaaja
     Pelaaja "2..8" -- "1" Monopolipeli
     Ruutu "1" -- "1" Toiminto
-    Sattuma "1" -- "1" Kortti
-    Yhteismaa "1" -- "1" Kortti
+    Sattuma "1" -- "*" Kortti
+    Yhteismaa "1" -- "*" Kortti
     Kortti "1" -- "1" Toiminto
+    Pelaaja "0..1" -- "0..*" Katu : omistaa
+    class Pelaaja{
+          raha: int
+      }
+    class Katu{
+          nimi: stirng
+          talot: int
+          hotelli: bool
+      }
 ```
