@@ -32,5 +32,9 @@ class PlayerRepository:
             return get_player_by_row(row)
         return None
     
-    
+    def delete_all(self):
+        cursor = self._connection.cursor()
+        cursor.execute("DELETE FROM players")
+        self._connection.commit()
+
 player_repository = PlayerRepository(get_database_connection())
