@@ -2,8 +2,7 @@
 .coverage
 htmlcov
 __pycache__/
-.env
-.env.test
+
 htmlcov/
 data/database.sqlite
 data/test_database.sqlite
