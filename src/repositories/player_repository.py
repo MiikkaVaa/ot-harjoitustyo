@@ -23,7 +23,7 @@ class PlayerRepository:
         cursor.execute("SELECT * FROM players")
         rows = cursor.fetchall()
         return [get_player_by_row(row) for row in rows]
-    
+
     def get_player_by_name(self, name):
         cursor = self._connection.cursor()
         cursor.execute("SELECT name, rating FROM players WHERE name = ?", (name,))
@@ -31,7 +31,7 @@ class PlayerRepository:
         if row:
             return get_player_by_row(row)
         return None
-    
+
     def delete_all(self):
         cursor = self._connection.cursor()
         cursor.execute("DELETE FROM players")

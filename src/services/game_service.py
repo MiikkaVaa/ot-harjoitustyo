@@ -14,7 +14,7 @@ class GameService:
     def create_player(self, name):
         if name == "":
             raise InvalidPlayerNameError("Player name cannot be empty")
-        
+
         if self._player_repository.get_player_by_name(name) is not None:
             raise PlayerExistsError(f"Player with name '{name}' already exists")
 
@@ -23,5 +23,5 @@ class GameService:
 
     def get_all_players(self):
         return self._player_repository.get_all_players()
-    
+
 game_service = GameService()
