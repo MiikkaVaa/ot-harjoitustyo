@@ -1,8 +1,10 @@
 from entities.player import Player
 from database_connection import get_database_connection
 
+
 def get_player_by_row(row):
     return Player(row["name"], row["rating"])
+
 
 class PlayerRepository:
     def __init__(self, connection):
@@ -12,7 +14,8 @@ class PlayerRepository:
         cursor = self._connection.cursor()
 
         cursor.execute(
-            "INSERT INTO players (name, rating) VALUES (?, ?)", (player.name, player.rating)
+            "INSERT INTO players (name, rating) VALUES (?, ?)", (
+                player.name, player.rating)
         )
 
         self._connection.commit()
@@ -26,7 +29,8 @@ class PlayerRepository:
 
     def get_player_by_name(self, name):
         cursor = self._connection.cursor()
-        cursor.execute("SELECT name, rating FROM players WHERE name = ?", (name,))
+        cursor.execute(
+            "SELECT name, rating FROM players WHERE name = ?", (name,))
         row = cursor.fetchone()
         if row:
             return get_player_by_row(row)
@@ -36,5 +40,6 @@ class PlayerRepository:
         cursor = self._connection.cursor()
         cursor.execute("DELETE FROM players")
         self._connection.commit()
+
 
 player_repository = PlayerRepository(get_database_connection())
