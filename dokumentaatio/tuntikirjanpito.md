@@ -7,6 +7,7 @@
 | 28.3 | 5 | Pelaajien luominen ja alustava UI|
 | 30.3 | 2 | Invoke ja testit|
 | 31.3| 1,5 | Tuntikirjanpito, README päivitetty ja testattu virtuaalityöasemalla |
-| | | |
-| | | |
-| | | |
+| 10.4 | 2,5 | Korjattu huomautukset, lisätty pylint ja autopep8 ja korjattu pylint virheet. |
+| 11.4 | 5 | Joukkueiden luominen ja joukkueiden näyytäminen UI:ssa sekä testit |
+| 13.4 | 3 | Arkkitehtuurikaaviot, .md tiedostojen päivitys|
+| yht | 25 |  |
