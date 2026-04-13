@@ -15,16 +15,16 @@ poistaa pelaajia tai lisätä pelejä.
 
 ## Perusversion toiminnallisuus
 
-- Lisätä pelaajia
- - Tallentaa nimi ja alkurating
-- Listata tiedot kaikista pelaajista ja heidän rating-arvoistaan
-- Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita satunnaisesti
-- Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
+- [x] Lisätä pelaajia
+- [x] Tallentaa nimi ja alkurating
+- [x] Listata tiedot kaikista pelaajista ja heidän rating-arvoistaan
+- [x] Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita satunnaisesti
+- [ ] Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
 
 ## Jatkokehitysideat
 
-- Luoda ylläpitäjä käyttäjärooli, joka voi lisätä/poistaa pelaajia ja tallentaa pelien lopputuloksia
-- Laajentaa rating eri pelimuotoihin
-- Tallentaa erilaisia pelaajakohtaisia tietoja kuten voitot ja tappiot
-- Jokkueiden luonti perustuen rating-arvoihin.
-- Mahdollisuus kumota edellisiä ottelutuloksia. 
+- [ ] Luoda ylläpitäjä käyttäjärooli, joka voi lisätä/poistaa pelaajia ja tallentaa pelien lopputuloksia
+- [ ] Laajentaa rating eri pelimuotoihin
+- [ ] Tallentaa erilaisia pelaajakohtaisia tietoja kuten voitot ja tappiot
+- [ ] Jokkueiden luonti perustuen rating-arvoihin.
+- [ ] Mahdollisuus kumota edellisiä ottelutuloksia. 
