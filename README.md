@@ -5,6 +5,7 @@
 
 - [Vaatimuusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
+- [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Changelog](dokumentaatio/changelog.md)
 
 
