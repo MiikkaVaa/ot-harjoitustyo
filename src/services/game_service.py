@@ -1,20 +1,18 @@
 import random
 from entities.player import Player
+from entities.match import Match
 from repositories.player_repository import (
-    player_repository as default_player_repository)
+    player_repository as df_player_repository)
 from repositories.match_repository import (
-    match_repository as default_match_repository
+    match_repository as df_match_repository
 )
 from services.rating_service import rating_service
-from entities.match import Match
 
 class PlayerExistsError(Exception):
     pass
 
-
 class InvalidPlayerNameError(Exception):
     pass
-
 
 class InvalidTeamSizeError(Exception):
     pass
@@ -22,9 +20,9 @@ class InvalidTeamSizeError(Exception):
 class SamePlayerError(Exception):
     pass
 
-
 class GameService:
-    def __init__(self, player_repository=default_player_repository, match_repository=default_match_repository):
+    def __init__(
+            self, player_repository=df_player_repository, match_repository=df_match_repository):
         self._player_repository = player_repository
         self._match_repository = match_repository
 

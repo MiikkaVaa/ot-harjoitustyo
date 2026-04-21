@@ -35,7 +35,7 @@ class PlayerRepository:
         if row:
             return get_player_by_row(row)
         return None
-    
+
     def update_player_rating(self, player, new_rating):
         cursor = self._connection.cursor()
         cursor.execute(
