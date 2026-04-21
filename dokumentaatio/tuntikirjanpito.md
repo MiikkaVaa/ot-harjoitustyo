@@ -10,4 +10,7 @@
 | 10.4 | 2,5 | Korjattu huomautukset, lisätty pylint ja autopep8 ja korjattu pylint virheet. |
 | 11.4 | 5 | Joukkueiden luominen ja joukkueiden näyytäminen UI:ssa sekä testit |
 | 13.4 | 3 | Arkkitehtuurikaaviot, .md tiedostojen päivitys|
-| yht | 25 |  |
+| 19.4 | 4 | Hain tietoa mahdollisista rating-järjestelmistä ja implementoin sen |
+| 20.4 | 5 | Pelien luominen ja UI päivitys |
+| 21.4 | 3 | Kaaviot, pylintkorjaukset, palautusta varten kaikki kunnossa |
+| yht | 37 |  |
