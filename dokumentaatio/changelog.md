@@ -12,3 +12,13 @@
 - Voi muodostaa satunnaisia halutun kokoisia joukkueita valituista pelaajista
 - Päivitetty UI näkymää näyttämään muodostetut joukkueet
 - Testattu joukkueiden luonti sekä onnistuneessa että epäonnistuneessa tilanteessa
+
+
+## Viikko 5
+
+- Luokka Otteluille
+- Tietokantataulut otteluille ja otteluiden molempien joukkueiden pelaajille
+- luotu RatingService joka hoitaa peleistä aiheutuvan rating muutoksen
+- luotu MatchRepository, joka hoitaa pelien luomisen.
+- Testit RatingServicelle kokonaisuudessaan
+- Uusi UI näkymä otteluiden tekemiseen
