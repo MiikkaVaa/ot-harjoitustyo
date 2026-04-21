@@ -19,7 +19,7 @@ poistaa pelaajia tai lisätä pelejä.
 - [x] Tallentaa nimi ja alkurating
 - [x] Listata tiedot kaikista pelaajista ja heidän rating-arvoistaan
 - [x] Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita satunnaisesti
-- [ ] Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
+- [x] Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
 
 ## Jatkokehitysideat
 
