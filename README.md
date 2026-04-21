@@ -8,6 +8,9 @@
 - [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Changelog](dokumentaatio/changelog.md)
 
+### Release
+
+- [Viikko5 Release](https://github.com/MiikkaVaa/ot-harjoitustyo/releases/tag/viikko5)
 
 ### Asennus
 
