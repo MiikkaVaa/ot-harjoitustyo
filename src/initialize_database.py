@@ -4,9 +4,9 @@ from database_connection import get_database_connection
 def drop_tables(connection):
     cursor = connection.cursor()
 
-    cursor.execute('''
-                   DROP TABLE IF EXISTS players;
-    ''')
+    cursor.execute('DROP TABLE IF EXISTS match_players;')
+    cursor.execute('DROP TABLE IF EXISTS matches;')
+    cursor.execute('DROP TABLE IF EXISTS players;')
 
     connection.commit()
 
@@ -22,8 +22,22 @@ def create_tables(connection):
                    );
     ''')
 
-    connection.commit()
+    cursor.execute('''
+                   CREATE TABLE matches (
+                       id INTEGER PRIMARY KEY,
+                       team_a_points INTEGER NOT NULL,
+                       team_b_points INTEGER NOT NULL
+                   );
+    ''')
 
+    cursor.execute('''
+                   CREATE TABLE match_players (
+                       match_id INTEGER NOT NULL REFERENCES matches(id),
+                       player_name TEXT NOT NULL REFERENCES players(name),
+                       team_side TEXT NOT NULL CHECK (team_side IN ("A", "B"))
+                   );
+    ''' )
+    connection.commit()
 
 def initialize_database():
     connection = get_database_connection()

@@ -4,8 +4,9 @@ from services.game_service import game_service, PlayerExistsError, InvalidPlayer
 
 
 class PlayersView:
-    def __init__(self, root):
+    def __init__(self, root, handle_show_match_view):
         self._root = root
+        self._handle_show_match_view = handle_show_match_view
         self._frame = None
         self._name_entry = None
         self._team_size_entry = None
@@ -53,15 +54,21 @@ class PlayersView:
         self._team_size_entry = ttk.Entry(master=self._frame)
         create_teams_button = ttk.Button(
             master=self._frame, text="Randomizer", command=self._handle_create_teams,)
-        
+
         teams_label = ttk.Label(master=self._frame, text="Teams")
         self._teams_listbox = tk.Listbox(master=self._frame, height=8)
+
+        open_match_view_button = ttk.Button(
+            master=self._frame, text="Record match result", command=self._handle_show_match_view
+        )
 
         team_size_label.grid(row=5, column=0, sticky=constants.W, padx=5, pady=5)
         self._team_size_entry.grid(row=5, column=1, sticky=constants.EW, padx=5, pady=5)
         create_teams_button.grid(row=6, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
         teams_label.grid(row=7, column=0, columnspan=2, sticky=constants.W, padx=5, pady=5)
         self._teams_listbox.grid(row=8, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
+        open_match_view_button.grid(
+            row=9, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
 
         self._load_players()
 
@@ -82,7 +89,7 @@ class PlayersView:
             messagebox.showerror(
                 "Error", "Player count must be divisible by team size and team size must be greater than 0")
             return
-        
+ 
         self._load_teams(teams)
 
     def _load_teams(self, teams):

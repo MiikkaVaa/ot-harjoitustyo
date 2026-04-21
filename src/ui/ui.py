@@ -1,5 +1,5 @@
 from ui.players_view import PlayersView
-
+from ui.match_view import MatchView
 
 class UI:
     def __init__(self, root):
@@ -17,5 +17,10 @@ class UI:
 
     def _show_players_view(self):
         self._hide_current_view()
-        self._current_view = PlayersView(self._root)
+        self._current_view = PlayersView(self._root, self._show_match_view)
+        self._current_view.pack()
+
+    def _show_match_view(self):
+        self._hide_current_view()
+        self._current_view = MatchView(self._root, self._show_players_view)
         self._current_view.pack()
