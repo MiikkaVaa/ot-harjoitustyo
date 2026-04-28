@@ -21,12 +21,36 @@ class SamePlayerError(Exception):
     pass
 
 class GameService:
+    """Sovelluslogiikasta vastaava luokka"
+    """
+
     def __init__(
             self, player_repository=df_player_repository, match_repository=df_match_repository):
+        """Luokan konstruktori.
+
+        Args:
+            player_repository: 
+                Oletuksena PlayerRepository-olio, 
+                joka vastaa pelaajiin liittyvistä tietokantaoperaatioista
+            match_repository: 
+                Oletuksena MatchRepository-olio, 
+                joka vastaa peleihin liittyvistä tietokantaoperaatioista
+        """
+
         self._player_repository = player_repository
         self._match_repository = match_repository
 
+
     def create_player(self, name):
+        """Luo uuden pelaajan.
+
+        Args:
+            name: Merkkijono joka kertoo luotavan pelaajan nimen
+
+        Returns:
+            Luotu Player-olio
+        """
+
         if name == "":
             raise InvalidPlayerNameError("Player name cannot be empty")
 
@@ -38,9 +62,24 @@ class GameService:
         return self._player_repository.create(player)
 
     def get_all_players(self):
+        """Hakee kaikki pelaajat tietokannasta.
+
+        Returns:
+            Lista Player-olioista, jotka on haettu tietokannasta
+        """
         return self._player_repository.get_all_players()
 
     def create_random_teams(self, players: list, team_size):
+        """Luo annetun koon kokoisia satunnaisia joukkueita annetuista pelaajista.
+
+        Args:
+            players: Lista Player-olioita
+            team_size: Lukuarvo, joka kertoo joukkueen koon
+
+        Returns:
+            Lista joukkueita.
+        """
+
         if team_size <= 0 or len(players) == 0 or len(players) % team_size != 0:
             raise InvalidTeamSizeError(
                 "Player count must be divisible by team size and team size must be greater than 0")
@@ -54,6 +93,16 @@ class GameService:
         return random_teams
 
     def teams_have_same_player(self, team_a_players, team_b_players):
+        """Tarkistetaan onko sama pelaaja kahdessa joukkueessa.
+
+        Args:
+            team_a_players: Lista Player-olioita
+            team_b_players: Lista Player-olioita
+
+        Returns:
+            True jos joukkueilla on sama pelaaja, muuten False
+        """
+
         team_a_names = {player.name for player in team_a_players}
         team_b_names = {player.name for player in team_b_players}
 
@@ -63,6 +112,14 @@ class GameService:
         return False
 
     def update_player_ratings(self, team_a_players, team_b_players, team_a_won: bool):
+        """Päivittää joukkeiden pelaajien ratingit.
+
+        Args:
+            team_a_players: Lista Player-olioita
+            team_b_players: Lista Player-olioita
+            team_a_won: Boolean-arvo, joka kertoo voittiko joukkue A
+        """
+
         if self.teams_have_same_player(team_a_players, team_b_players):
             raise SamePlayerError("Teams cannot have the same player")
 
@@ -83,13 +140,27 @@ class GameService:
             new_rating = rating_service.calculate_new_rating(
                 player.rating, team_a_score, team_a_expected_winratio)
             self._player_repository.update_player_rating(player, new_rating)
+            player.update_rating(new_rating)
 
         for player in team_b_players:
             new_rating = rating_service.calculate_new_rating(
                 player.rating, team_b_score, team_b_expected_winratio)
             self._player_repository.update_player_rating(player, new_rating)
+            player.update_rating(new_rating)
 
     def save_match_result(self, team_a_players, team_b_players, team_a_points, team_b_points):
+        """Luo uuden pelin.
+
+        Args:
+            team_a_players: Lista Player-olioita
+            team_b_players: Lista Player-olioita
+            team_a_points: Lukuarvo, joka kertoo joukkueen A pisteet
+            team_b_points: Lukuarvo, joka kertoo joukkueen B pisteet
+
+        Returns:
+            Match-olio: Luo uuden pelin
+        """
+
         if self.teams_have_same_player(team_a_players, team_b_players):
             raise SamePlayerError("Teams cannot have the same player")
         team_a_player_names = [player.name for player in team_a_players]
@@ -97,5 +168,14 @@ class GameService:
         match = Match(team_a_player_names, team_b_player_names, team_a_points, team_b_points)
 
         return self._match_repository.create(match)
+
+    def get_all_matches(self):
+        """Hakee kaikki pelit
+
+        Returns:
+            Lista Match-olioita, jotka on haettu tietokannasta
+        """
+
+        return self._match_repository.get_all_matches()
 
 game_service = GameService()

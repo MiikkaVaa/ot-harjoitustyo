@@ -4,9 +4,23 @@ from services.game_service import game_service, PlayerExistsError, InvalidPlayer
 
 
 class PlayersView:
-    def __init__(self, root, handle_show_match_view):
+    """Pelaajien luomisesta ja listauksesta vastaava näkymä.
+    """
+
+    def __init__(self, root, handle_show_match_view, handle_show_match_history_view):
+        """Luokan konstruktori. Luo uuden pelaajanäkymän.
+
+        Args:
+            root: Tkinter-elementti, joka toimii näkymän juurielementtinä
+            handle_show_match_view: Toiminto jolla näkymä vaihtuu
+                                    pelin tallennukseen liittyvään näkymään.
+            handle_show_match_history_view: Toiminto jolla näkymä vaihtuu
+                                    pelihistorian tarkasteluun liittyvään näkymään.
+        """
+
         self._root = root
         self._handle_show_match_view = handle_show_match_view
+        self._handle_show_match_history_view = handle_show_match_history_view
         self._frame = None
         self._name_entry = None
         self._team_size_entry = None
@@ -16,12 +30,21 @@ class PlayersView:
         self._initialize()
 
     def pack(self):
+        """Näyttää näkymän
+        """
+
         self._frame.pack(fill=constants.X, padx=10, pady=10)
 
     def destroy(self):
+        """Sulkee äkymän
+        """
+
         self._frame.destroy()
 
     def _initialize(self):
+        """Luo näkymän elementit ja asettelee ne
+        """
+
         self._frame = ttk.Frame(self._root)
 
         title_label = ttk.Label(master=self._frame, text="Players")
@@ -62,6 +85,10 @@ class PlayersView:
             master=self._frame, text="Record match result", command=self._handle_show_match_view
         )
 
+        open_match_history_view_button = ttk.Button(
+            master=self._frame, text="View match history", command=self._handle_show_match_history_view
+        )
+
         team_size_label.grid(row=5, column=0, sticky=constants.W, padx=5, pady=5)
         self._team_size_entry.grid(row=5, column=1, sticky=constants.EW, padx=5, pady=5)
         create_teams_button.grid(row=6, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
@@ -69,14 +96,25 @@ class PlayersView:
         self._teams_listbox.grid(row=8, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
         open_match_view_button.grid(
             row=9, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
+        open_match_history_view_button.grid(
+            row=10, column=0, columnspan=2, sticky=constants.EW, padx=5, pady=5)
 
         self._load_players()
 
     def _get_selected_players(self):
+        """Hakee valitut pelaajat.
+
+        Returns:
+            Lista Player-olioita, jotka on valittu pelaajalistasta
+        """
+
         selected_players = self._players_listbox.curselection()
         return [self._players[i] for i in selected_players]
 
     def _handle_create_teams(self):
+        """Luo satunnaiset tiimit valituista pelaajista.
+        """
+
         selected_players = self._get_selected_players()
         try:
             team_size = int(self._team_size_entry.get())
@@ -93,12 +131,21 @@ class PlayersView:
         self._load_teams(teams)
 
     def _load_teams(self, teams):
+        """Lataa joukkuuet näkymään.
+
+        Args:
+            teams: Lista joukkueista, jotka näytetään näkymässä.
+        """
+
         self._teams_listbox.delete(0, constants.END)
         for i, team in enumerate(teams, start=1):
             players_in_team = ", ".join(player.name for player in team)
             self._teams_listbox.insert(constants.END, f"Team {i}: {players_in_team}")
 
     def _handle_add_player(self):
+        """Luo uuden pelaajan näkymässä annetun nimen perusteella.
+        """
+
         name = self._name_entry.get()
         try:
             game_service.create_player(name)
@@ -114,6 +161,9 @@ class PlayersView:
         self._load_players()
 
     def _load_players(self):
+        """Lataa kaikki pelaajat näkymään.
+        """
+
         self._players = game_service.get_all_players()
         self._players_listbox.delete(0, constants.END)
         self._teams_listbox.delete(0, constants.END)

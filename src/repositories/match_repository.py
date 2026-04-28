@@ -2,10 +2,28 @@ from database_connection import get_database_connection
 from entities.match import Match
 
 class MatchRepository:
+    """Pelien tietokantaoperaatioista vastaava luokka
+    """
+
     def __init__(self, connection):
+        """Luokan konstruktori
+
+        Args:
+            connection: Yhteys tietokantaan
+        """
+
         self._connection = connection
 
     def create(self, match):
+        """Tallentaa pelin tietokantaan
+
+        Args:
+            match: Match_olio,, joka tallennetaan
+
+        Returns:
+            Tallennetun pelin id tietokannassa
+        """
+
         cursor = self._connection.cursor()
 
         cursor.execute(
@@ -31,8 +49,14 @@ class MatchRepository:
         return match_id
 
     def get_all_matches(self):
+        """Hakee kaikki pelit tietokannasta
+
+        Returns:
+            Lista Match-olioita, jotka on haettu tietokannasta
+        """
+
         cursor = self._connection.cursor()
-        cursor.execute("SELECT * FROM matches")
+        cursor.execute("SELECT * FROM matches ORDER BY id DESC")
         rows = cursor.fetchall()
 
         matches = []
@@ -49,9 +73,22 @@ class MatchRepository:
                 else:
                     team_b_players.append(player_row["player_name"])
             matches.append(Match(
-                team_a_players, team_b_players, row["team_a_points"], row["team_b_points"]
+                team_a_players,
+                team_b_players,
+                row["team_a_points"],
+                row["team_b_points"],
+                match_id=row["id"]
                 ))
 
         return matches
+
+    def delete_all(self):
+        """Poista kaikki pelit tietokannasta.
+        """
+
+        cursor = self._connection.cursor()
+        cursor.execute("DELETE FROM match_players")
+        cursor.execute("DELETE FROM matches")
+        self._connection.commit()
 
 match_repository = MatchRepository(get_database_connection())

@@ -19,7 +19,7 @@ class MatchView:
 
     def destroy(self):
         self._frame.destroy()
-    
+
     def _initialize(self):
         self._frame = ttk.Frame(self._root)
 
