@@ -8,7 +8,9 @@
 - [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Changelog](dokumentaatio/changelog.md)
 
-### Release
+### Releases
+
+- [Viikko6 Release](https://github.com/MiikkaVaa/ot-harjoitustyo/releases/tag/Viikko6)
 
 - [Viikko5 Release](https://github.com/MiikkaVaa/ot-harjoitustyo/releases/tag/viikko5)
 
