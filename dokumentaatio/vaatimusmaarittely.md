@@ -27,4 +27,5 @@ poistaa pelaajia tai lisätä pelejä.
 - [ ] Laajentaa rating eri pelimuotoihin
 - [ ] Tallentaa erilaisia pelaajakohtaisia tietoja kuten voitot ja tappiot
 - [ ] Jokkueiden luonti perustuen rating-arvoihin.
-- [ ] Mahdollisuus kumota edellisiä ottelutuloksia. 
+- [ ] Mahdollisuus kumota edellisiä ottelutuloksia.
+- [x] Pelihistorian ja niiden tietojen näyttäminen.

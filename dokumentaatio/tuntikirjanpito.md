@@ -13,4 +13,7 @@
 | 19.4 | 4 | Hain tietoa mahdollisista rating-järjestelmistä ja implementoin sen |
 | 20.4 | 5 | Pelien luominen ja UI päivitys |
 | 21.4 | 3 | Kaaviot, pylintkorjaukset, palautusta varten kaikki kunnossa |
-| yht | 37 |  |
+| 26.4 | 5 | Pelihistorian sovelluslogiikka ja UI |
+| 27.4 | 3 | Testit ja docstring |
+| 28.4 | 4 | Dokumentaatio ja korjaukset |
+| yht | 49 |  |
