@@ -22,3 +22,10 @@
 - luotu MatchRepository, joka hoitaa pelien luomisen.
 - Testit RatingServicelle kokonaisuudessaan
 - Uusi UI näkymä otteluiden tekemiseen
+
+## Viikko 6
+
+- Peleille lisätty id pelihistoriaa varten.
+- Sovelluslogiikka pelihistorian näyttämiselle.
+- Uusi UI näkymä pelihistorian näyttämiselle.
+- MatchRepositorylle testit ja loput GameService testit
