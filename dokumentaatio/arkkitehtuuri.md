@@ -4,7 +4,7 @@
 
 ## Pakkaus- ja Luokkarakenne
 
-![Pakkaus-ja-luokkarakenne](./kuvat/ot-harjoitustyo-pakkausjaluokkakaavio.png)
+![Pakkaus-ja-luokkarakenne](./kuvat/ot-harjoitustyo-luokka-ja-pakkauskaavio.png)
 
 ## Sekvenssikaaviot
 
