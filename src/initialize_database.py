@@ -15,7 +15,7 @@ def create_tables(connection):
     cursor = connection.cursor()
 
     cursor.execute('''
-                   CREATE TABLE players (
+                   CREATE TABLE IF NOT EXISTS players (
                        id INTEGER PRIMARY KEY,
                        name TEXT NOT NULL UNIQUE,
                        rating INTEGER NOT NULL DEFAULT 1500
@@ -23,7 +23,7 @@ def create_tables(connection):
     ''')
 
     cursor.execute('''
-                   CREATE TABLE matches (
+                   CREATE TABLE IF NOT EXISTS matches (
                        id INTEGER PRIMARY KEY,
                        team_a_points INTEGER NOT NULL,
                        team_b_points INTEGER NOT NULL
@@ -31,7 +31,7 @@ def create_tables(connection):
     ''')
 
     cursor.execute('''
-                   CREATE TABLE match_players (
+                   CREATE TABLE IF NOT EXISTS match_players (
                        match_id INTEGER NOT NULL REFERENCES matches(id),
                        player_name TEXT NOT NULL REFERENCES players(name),
                        team_side TEXT NOT NULL CHECK (team_side IN ("A", "B"))
@@ -45,6 +45,10 @@ def initialize_database():
     drop_tables(connection)
     create_tables(connection)
 
+def ensure_database_initialized():
+    connection = get_database_connection()
+
+    create_tables(connection)
 
 if __name__ == "__main__":
     initialize_database()
