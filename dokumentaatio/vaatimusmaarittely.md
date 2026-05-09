@@ -3,29 +3,27 @@
 ## Sovelluksen tarkoitus
 
 Sovellus tarjoaa Megazone-harrastajien käyttöön ohjelman, joka auttaa pelien järjestämistä ja luo 
-matchmaking rating-järjestelmän. Sovelluksessa on mahdollista ylläpitää pelaajalistaa ja seurata 
-pelaajien tasoja sekä muodostaa joukkueita valituista pelaajista.
+matchmaking rating-järjestelmän. 
 
-Sovellusta on aluksi tarkoitus käyttää 3 vs 3 -pelimuotoon.
+## Käyttöliittymä
 
-## Käyttäjät
+Sovellus koostuu kolmesta erilaisesta näkymästä. Käynnistyessä sivulle aukeaa pelaajien lisäämis ja joukkueiden luonti sivu. Tältä sivulta voi edetä joko pelin asetettamis sivulle tai pelihistoria sivulle.
 
-Alussa ei ole eri käyttäjärooleja, mutta myöhemmin mahdollista lisätä ylläpitäjä, jolla on ainoastaan valtuudet
-poistaa pelaajia tai lisätä pelejä.
+## Perusversion toiminnallisuus1
 
-## Perusversion toiminnallisuus
-
-- [x] Lisätä pelaajia
-- [x] Tallentaa nimi ja alkurating
-- [x] Listata tiedot kaikista pelaajista ja heidän rating-arvoistaan
-- [x] Sovelluksessa voidaan muodostaa valituista pelaajista halutun kokoisia joukkueita satunnaisesti
-- [x] Voidaan tallentaa ottelun lopputulos, joka päivittää pelaajien rating-arvoja
+- Sovellus aukeaa sivulle jossa voi lisätä pelaajan asettamalla nimen.
+  - Pelaajat saavat aluksi vakio rating arvon 1500. Nimi ei saa olla tyhjä.
+- Luodut pelaajat näkyvät enimmäisellä sivulla listassa ja niistä voi valita joukkueiden luontia varten halutun määrän.
+  - Satunnaisten joukkueiden luonti tapahtuu valitsemalla pelaajat ja joukkue koko. Pelaajien tulee olla jaollinen joukkue koolla.
+- Pelin asettamis sivulla voidaan luoda peli joka vaikuttaa pelaajien rating-arvoon.
+  - Listoista valitaan molemmille joukkueille pelaajat ja asetetaan pistemäärät.
+  - Pelaaja ei voi olla molemmilla joukkueilla.
+- Pelihistoria sivulla voi tarkastella aikaisempien otteluiden tuloksia.
+  - Molempien joukkueiden pelaajat ja pistemäärät näkyvät pelilistan vieressä.
 
 ## Jatkokehitysideat
+- Aikaisempien pelien poisto ja ratingin palauttaminen
+- Joukkueiden luonti perustuen rating-arvoihin. Ei siis satunnaisesti.
+- Pelaajakohtaisten tietojen ylläpitäminen kuten voitot ja tappiot.
+- Parantaa nimien validointia. 
 
-- [ ] Luoda ylläpitäjä käyttäjärooli, joka voi lisätä/poistaa pelaajia ja tallentaa pelien lopputuloksia
-- [ ] Laajentaa rating eri pelimuotoihin
-- [ ] Tallentaa erilaisia pelaajakohtaisia tietoja kuten voitot ja tappiot
-- [ ] Jokkueiden luonti perustuen rating-arvoihin.
-- [ ] Mahdollisuus kumota edellisiä ottelutuloksia.
-- [x] Pelihistorian ja niiden tietojen näyttäminen.
