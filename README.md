@@ -7,6 +7,8 @@
 - [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Changelog](dokumentaatio/changelog.md)
+- [Testausdokumentti](dokumentaatio/testaus.md)
+- [Käyttöohje](dokumentaatio/testaus.md)
 
 ### Releases
 
