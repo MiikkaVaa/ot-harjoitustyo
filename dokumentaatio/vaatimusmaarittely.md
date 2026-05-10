@@ -7,7 +7,7 @@ matchmaking rating-järjestelmän.
 
 ## Käyttöliittymä
 
-Sovellus koostuu kolmesta erilaisesta näkymästä. Käynnistyessä sivulle aukeaa pelaajien lisäämis ja joukkueiden luonti sivu. Tältä sivulta voi edetä joko pelin asetettamis sivulle tai pelihistoria sivulle.
+Sovellus koostuu kolmesta erilaisesta näkymästä. Käynnistyessä sivulle aukeaa pelaajien lisäämis- ja joukkueiden luontisivu. Tältä sivulta voi edetä joko pelin asetussivulle tai pelihistoriasivulle.
 
 ## Perusversion toiminnallisuus1
 
