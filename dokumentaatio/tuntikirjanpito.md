@@ -16,4 +16,5 @@
 | 26.4 | 5 | Pelihistorian sovelluslogiikka ja UI |
 | 27.4 | 3 | Testit ja docstring |
 | 28.4 | 4 | Dokumentaatio ja korjaukset |
-| yht | 49 |  |
+| 9.5 | 3 | Testaus.md ja vaatimusmäärittely päivitetty. |
+| yht | 52 |  |
