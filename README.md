@@ -8,9 +8,10 @@
 - [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Changelog](dokumentaatio/changelog.md)
 - [Testausdokumentti](dokumentaatio/testaus.md)
-- [Käyttöohje](dokumentaatio/testaus.md)
+- [Käyttöohje](dokumentaatio/kayttoohje.md)
 
 ### Releases
+- [Loppupalautus](https://github.com/MiikkaVaa/ot-harjoitustyo/releases/tag/Loppupalautus)
 
 - [Viikko6 Release](https://github.com/MiikkaVaa/ot-harjoitustyo/releases/tag/Viikko6)
 
